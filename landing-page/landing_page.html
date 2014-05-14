@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<title>
+Article 19
+</title>
+<style>
+#bg-img{
+opacity:1}
+#transparent{
+width:inherit;
+height:inherit;}
+#research{
+width:32.8%;
+height:46%;
+opacity:0; }
+#home {
+width:66%;
+height:46%;
+opacity:0; }
+#news{
+width:32.8%;
+height:66%;
+opacity:0;}
+#articles{
+width:32.9%;
+height:66%;
+opacity:0;}
+#interviews{
+width:32.8%;
+height:66%;
+opacity:0;}
+#events{
+width:65.9%;
+height:46%;
+opacity:0; }
+#about{
+width:32.8%;
+height:46%;
+opacity:0; }
+</style>
+<head>
+<link rel="icon" 
+      type="image/png" 
+      href="avogadro.png" />
+<script src="jquery-2.1.0.min.js" type="text/javascript">
+</script>
+<script src="jquery.transit.min.js" type="text/javascript">
+</script>
+<script>
+$(document).ready(function(){
+  $("#home_map").hover(function(){
+    $("#home").transition({top:"1.5%",opacity:1},250,'in');
+	},function(){
+     $("#home").transition({top:"5.5%",opacity:0},250,'in');});
+});
+$(document).ready(function(){
+  $("#news_map").hover(function(){
+    $("#news").transition({top:"17.5%",opacity:1},250,'in');
+	},function(){
+     $("#news").transition({top:"21.5%",opacity:0},250,'in');});
+});
+$(document).ready(function(){
+  $("#articles_map").hover(function(){
+    $("#articles").transition({top:"17.5%",opacity:1},250,'in');
+	},function(){
+     $("#articles").transition({top:"21.5%",opacity:0},250,'in');});
+});
+$(document).ready(function(){
+  $("#interviews_map").hover(function(){
+    $("#interviews").transition({top:"17.5%",opacity:1},250,'in');
+	},function(){
+     $("#interviews").transition({top:"21.5%",opacity:0},250,'in');});
+});
+$(document).ready(function(){
+  $("#events_map").hover(function(){
+    $("#events").transition({top:"53.5%",opacity:1},250,'in');
+	},function(){
+     $("#events").transition({top:"57.5%",opacity:0},250,'in');});
+ 
+ 
+$("#about_map").hover(function(){
+  $("#about").transition({top:"53.5%",opacity:1},250,'in');
+	},function(){
+     $("#about").transition({top:"57.5%",opacity:0},250,'in');});
+
+$("#research_map").hover(function(){
+  $("#research").transition({top:"1.5%",opacity:1},250,'in');
+	},function(){
+     $("#research").transition({top:"5.5%",opacity:0},250,'in');});
+});
+</script>
+
+</head>
+<body>
+<img id = "ref_mark" src = "#reference_mark.gif" style = "top:1%;left:1%;z-index:0;position:absolute;opacity:0">
+<script>
+
+function _(rx,ry){
+	return parseInt(window.innerWidth*rx) +","+ parseInt(window.innerHeight*ry);
+}
+$(document).ready(function(){
+document.getElementById("home_map").setAttribute("coords", _(0.33,0)+", "+ _(0.99,0)+", "+ _(0.99,0.15)+", "+ _(0.67,0.45)+", "+ _(0.33,0.15));
+document.getElementById("news_map").setAttribute("coords", _(0,0.45)+", "+ _(0.33,0.15)+", "+ _(0.33,0.53)+", "+ _(0,0.82));
+document.getElementById("articles_map").setAttribute("coords", _(0.33,0.15)+", "+ _(0.33,0.53)+", "+ _(0.66,0.82)+", "+ _(0.66,0.45)); 
+document.getElementById("interviews_map").setAttribute("coords", _(0.66,0.82)+", "+ _(0.66,0.45)+", "+ _(1,0.15)+", "+ _(1,0.53));
+document.getElementById("events_map").setAttribute("coords", _(0,0.81)+", "+ _(0.33,0.52)+", "+ _(0.69,0.85)+", "+ _(0.67,0.98)+", "+ _(0,0.98));
+document.getElementById("about_map").setAttribute("coords", _(0.66,0.82)+", "+ _(0.66,1)+", "+ _(1,1)+", "+ _(1,0.53));
+document.getElementById("research_map").setAttribute("coords", _(0,0)+", "+ _(0.33,0)+", "+ _(0.33,0.17)+", "+ _(0,0.45));
+});
+$(document).resize(function(){
+document.getElementById("home_map").setAttribute("coords", _(0.335,0.005)+", "+ _(0.995,0.005)+", "+ _(0.995,0.155)+", "+ _(0.675,0.455)+", "+ _(0.335,0.155));
+document.getElementById("news_map").setAttribute("coords", _(0.005,0.455)+", "+ _(0.335,0.155)+", "+ _(0.335,0.535)+", "+ _(0.005,0.825));
+document.getElementById("articles_map").setAttribute("coords", _(0.335,0.155)+", "+ _(0.335,0.535)+", "+ _(0.665,0.825)+", "+ _(0.665,0.455)); 
+document.getElementById("interviews_map").setAttribute("coords", _(0.665,0.825)+", "+ _(0.665,0.455)+", "+ _(1,0.155)+", "+ _(1,0.535));
+document.getElementById("events_map").setAttribute("coords", _(0.005,0.815)+", "+ _(0.335,0.525)+", "+ _(0.695,0.855)+", "+ _(0.675,0.985)+", "+ _(0.005,0.985));
+document.getElementById("about_map").setAttribute("coords", _(0.665,0.825)+", "+ _(0.665,1)+", "+ _(1,1)+", "+ _(1,0.535));
+document.getElementById("research_map").setAttribute("coords", _(0.005,0.005)+", "+ _(0.335,0.005)+", "+ _(0.335,0.175)+", "+ _(0.005,0.455));
+});
+//alert("The image is located at: " + position.x + ", " + position.y);
+</script>
+
+<img id = "bg-img" src = "wallpaper.png" style="position:absolute;z-index:0;height:100%;width:100%">
+<img id = "cover" src = "transparent.png" style = "position:absolute;z-index:2;height:100%;width:100%;opacity:0" usemap = "#cover_map">
+<img id = "research" src = "research.png" style="position:absolute;z-index:1;left:0.5%;top:5.5%;">
+<img id = "events" src = "events.png" style="position:absolute;z-index:1;left:0.5%;top:57.5%;">
+<img id = "home" src = "home.png" style="position:absolute;z-index:1;left:33.5%;top:5.5%">
+<img id = "news" src = "news.png" style="position:absolute;z-index:1;left:0.5%;top:21.5%">
+<img id = "articles" src = "articles.png" style="position:absolute;z-index:1;left:33.5%;top:21.5%">
+<img id = "interviews" src = "interviews.png" style="position:absolute;z-index:1;left:66.6%;top:21.5%">
+<img id = "about" src = "about.png" style="position:absolute;z-index:1;left:66.6%;top:57.5%;">
+<map name = "cover_map">
+	<area id = "home_map" shape="poly"  href="http:www.google.com">
+	<area id = "news_map" shape = "poly" href = "http:www.googlecom">
+	<area id = "articles_map" shape="poly" href="http:www.google.com">
+	<area id = "interviews_map" shape="poly"  href="http:www.google.com">
+	<area id = "events_map" shape="poly"  href="http:www.google.com">
+	<area id = "about_map" shape="poly" href="http:www.google.com">
+	<area id = "research_map" shape="poly" href="http:www.google.com">
+</map>
+</body>
+</html>
